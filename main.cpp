@@ -1,8 +1,25 @@
+#include <ftxui/screen/screen.hpp>
+#include <ftxui/dom/elements.hpp>
 #include "Serie.hpp"
+#include <iostream>
+using namespace std;
+using namespace ftxui;
 
 
 int main(int argc, char const *argv[])
 {
+auto Pantalla = Screen::Create{
+    ftxui::Full(),
+    ftxui::Full()
+};
+
+auto Documento = vbox{
+    spinner(21,1);
+}
+Render(Pantalla,documento);
+Pantalla.print();
+
+
 
 Serie serienavidena;
 
