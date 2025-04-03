@@ -1,44 +1,49 @@
+#include "Serie.hpp"
 #include <ftxui/screen/screen.hpp>
 #include <ftxui/dom/elements.hpp>
-#include "Serie.hpp"
 #include <iostream>
+#include <string>
+#include <thread>
 using namespace std;
 using namespace ftxui;
-
-
 int main(int argc, char const *argv[])
 {
-auto Pantalla = Screen::Create{
-    ftxui::Full(),
-    ftxui::Full()
-};
+auto pantalla = Screen::Create(
+Dimension::Full(),
+Dimension::Full());
 
-auto Documento = vbox{
-    spinner(21,1);
+int fotograma =0;
+string resetPosition;
+while(true){
+
+    auto documento = vbox(
+    spinner(21, fotograma)
+);
+Render(pantalla, documento);
+pantalla.Print();
+resetPosition = pantalla.ResetPosition();
+fotograma++;
+
+std::this_thread::sleep_for(0.1s);
 }
-Render(Pantalla,documento);
-Pantalla.print();
 
 
+  //Serie serienavidena;
 
-Serie serienavidena;
+  //serienavidena.ApagarTodo();
+  //serienavidena.Imprimir();
+  //serienavidena.EncenderTodo();
+  //serienavidena.Imprimir();
+  //serienavidena.ApagarCantidad(8);
+  //serienavidena.Imprimir();
+  //serienavidena.EncenderCantidad(3);
+  //serienavidena.Imprimir();
+  //serienavidena.AlternarEncendido();
+  //serienavidena.Imprimir();
+  //serienavidena.RecorrerDerecha();
+  //serienavidena.Imprimir();
+  //serienavidena.RecorrerIzquierda();
+  //serienavidena.Imprimir();
 
-serienavidena.ApagarTodo();
-serienavidena.Imprimir();
-serienavidena.EncenderTodo();
-serienavidena.Imprimir();
-serienavidena.ApagarCantidad(8);
-serienavidena.Imprimir();
-serienavidena.EncenderCantidad(3);
-serienavidena.Imprimir();
-serienavidena.AlternarEncendido();
-serienavidena.Imprimir();
-serienavidena.RecorrerDerecha();
-serienavidena.Imprimir();
-serienavidena.RecorrerIzquierda();
-serienavidena.Imprimir();
-
-
-
- return 0;
+return 0;
 }

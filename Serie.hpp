@@ -12,13 +12,13 @@ public:
     void EncenderTodo(){
         for (auto &&foco : foquitos)
         {
-            foco.Encender();
+        foco.Encender();
         }
     }
-    void ApagarTodo(){
+        void ApagarTodo(){
         for (auto &&foco : foquitos)
         {
-            foco.Apagar();
+        foco.Apagar();
         }
     }
     void EncenderCantidad(int cantidad){

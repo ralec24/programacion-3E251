@@ -1,11 +1,11 @@
-#include <iostream> //Input, Output stream, entrada y salida de datos 
+#include <iostream> //Input, Output stream, entrada y salida de datos
 #include "EstadoFoco.hpp"
 
 class Foco
 {
 private:
     EstadoFoco estado;
-    
+
 public:
     Foco() {
         estado = EstadoFoco::Apagado;
@@ -42,7 +42,7 @@ public:
         else
         {
             estado = EstadoFoco::Encendido;
-   }
+        }
 }
 
 };
