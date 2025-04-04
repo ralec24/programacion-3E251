@@ -1,17 +1,14 @@
-#include <iostream> //Input, Output stream, entrada y salida de datos
 #include "EstadoFoco.hpp"
-
+#include <iostream>
 class Foco
 {
 private:
     EstadoFoco estado;
-
 public:
-    Foco() {
+    Foco(){
         estado = EstadoFoco::Apagado;
     }
     ~Foco() {}
-
     void Encender(){
         estado = EstadoFoco::Encendido;
     }
@@ -22,27 +19,21 @@ public:
         switch (estado)
         {
         case EstadoFoco::Encendido:
-            std::cout<<"*";
+        std::cout << "*" << std::endl;
             break;
-
         case EstadoFoco::Apagado:
-            std::cout<<"o";
+        std::cout << "o" << std::endl;
             break;
 
-        default: throw "Estado foco no identificado";
+                default: throw "Estado no indentificado";
             break;
         }
     }
-
     void Alternar(){
-        if(estado == EstadoFoco::Encendido)
-        {
-            estado = EstadoFoco::Apagado;
-        }
-        else
-        {
-            estado = EstadoFoco::Encendido;
-        }
+        if(estado== EstadoFoco::Encendido){
+            estado== EstadoFoco::Apagado;
+    }
+    else{
 }
-
+}
 };

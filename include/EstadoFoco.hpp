@@ -1,5 +1,4 @@
-enum EstadoFoco
-{
+enum EstadoFoco{
   Encendido,
   Apagado
 };
