@@ -3,6 +3,8 @@
         "iostream": "cpp",
         "string": "cpp",
         "thread": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "istream": "cpp",
+        "fstream": "cpp"
     }
 }
