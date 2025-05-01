@@ -1,4 +1,4 @@
-#include <iostream>
+c
 using namespace std;
 int a=74;
 int b=185;
